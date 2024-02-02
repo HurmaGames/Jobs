@@ -1,0 +1,569 @@
+@font-face {
+    font-family:'Jura';
+    src: url(../css/fonts/Jura.ttf);
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+}
+
+body {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 2.0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* HEADER BLOCK */
+
+.header_nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+
+}
+
+.header_text {
+    display: flex;
+    gap: 30px;
+
+}
+
+.header_text_nav {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 20px;
+    position: relative;
+
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    font-size: 20px;
+    transition: color .2s linear;
+
+    font-family: 'Jura';
+}
+
+.header_logo img {
+    cursor: pointer;
+}
+
+.header_text_nav::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    background: rgb(0, 0, 0);
+    height: 2px;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .3s;
+}
+
+.header_text_nav:hover::after {
+    width: 100%;
+}
+
+.header_nav:hover {
+    color: #fff;
+}
+
+.header_nav:hover:after {
+    opacity: 1;
+}
+
+.header_icon {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
+
+.poick {
+    width: 170px;
+    height: 40px;
+    border: 1px solid black;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding-left: 10px;
+    
+}
+
+.poick a {
+    display: block;
+    text-decoration: none;
+    color: #333333;
+    font-size: 20px;
+    text-transform: lowercase;
+    font-family: 'Jura';
+    font-weight: 500;
+}
+
+.header_icons {
+    display: flex;
+    align-items: center;
+    transition: .7s;
+}
+
+.header_icons:hover {
+    transform: scale(1.15);
+} 
+
+/* BANNER BLOCK */
+
+.intro {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+
+    background: url(../css/banner/баннер.png) center no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+
+    font-family: 'Jura';
+    letter-spacing: 2px;
+}
+
+.section_banner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.banner_text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.banner_text h1 {
+    font-size: 100px;
+    color:#F3F3F3;
+    text-shadow: 1px 1px 1px rgb(233, 137, 59);
+    font-weight: 700;
+}
+
+.banner_text p {
+    font-size: 25px;
+    color: #F3F3F3;
+    text-shadow: 1px 1px 1px rgb(233, 137, 59);
+    font-weight: 500;
+}
+
+.banner_text a {
+    text-decoration: none;
+    color: #F3F3F3;
+    text-shadow: 1px 1px 1px rgb(233, 137, 59);
+    font-size: 25px;
+    font-weight: 500;
+    border: 1px solid white;
+    padding: 10px 40px;
+    transition: .7s;
+}
+
+.banner_text a:hover {
+    background-color: #F3F3F3;
+    color: #333;
+    text-shadow: none;
+}
+
+/* TOVAR BLOCK */
+
+.section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    font-family: 'Jura';
+    letter-spacing: 2.0;
+}
+
+.section_title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #95411B;
+    padding-bottom: 50px;
+}
+
+.section_tovar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: 'Jura';
+}
+
+.tovar {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #95411B;
+    width: 400px;
+    height: 450px;
+    align-items: center;
+    border-radius: 26px;
+}
+
+.tovar_photo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.sviter {
+    align-items: center;
+    display: block;
+}
+
+.znak {
+   padding-bottom: 190px;
+   display: block;
+   position: absolute;
+   left: 250px;
+
+}
+
+.tovar_name { 
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: lowercase;
+    display: flex;
+    margin-right: 250px;
+    color: #95411B;
+}
+
+.tovar_size {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    
+}
+
+.size_1 {
+    border: 1.5px solid #95411B;
+    width: 50px;
+    height: 35px;
+    text-align: center;
+    transition: .5s;
+    cursor: pointer;
+    color: #95411B;
+}
+
+.size_1:hover {
+    background-color: #95411B;
+    color: #F3F3F3;
+
+}
+
+.tovar_price {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: 700;
+    gap: 80px;
+}
+
+.tovar_price a {
+    text-decoration: none;
+    color: #95411B;
+    border: 1.5px solid #95411B;
+    text-align: center;
+    padding: 5px 20px;
+    transition: .5s;
+}
+
+.tovar_price a:hover {
+    background-color: #95411B;
+    color: #F3F3F3;
+}
+
+.tovar_price p {
+    color: #95411B;
+
+}
+
+
+
+.categories {
+    margin-top: 117px;
+    width: 1090px;
+    height: 838px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.categories .img1 {
+    width: 568px;
+    height: 728px;
+    margin-top: 55px;
+}
+
+.categories .img1:hover,
+.img2:hover,
+.img3:hover {
+    cursor: pointer;
+}
+
+.categories .img2 {
+    width: 417px;
+    height: 518px;
+    margin-left: 38px;
+}
+
+.categories .img3 {
+    width: 335px;
+    height: 284px;
+
+}
+
+.categories div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------------------футер-------------------- */
+
+footer {
+    background-color: #333333;
+    padding-top: 48px;
+    padding-bottom: 28px;
+    height: 350px;
+    letter-spacing: 2px;
+    font-family: 'Jura';
+}
+
+.footer_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+
+
+.footer_nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    text-transform: lowercase;
+}
+
+.footer_nav p {
+    font-size: 20px;
+    color: #F3F3F3;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.footer_nav p:hover {
+    text-decoration: underline;
+}
+
+.footer_info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.footer_info img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer_info h3{
+    font-size: 25px;
+    color: #F3F3F3;
+    font-weight: 700;
+    text-transform: lowercase;
+}
+
+.footer_info p {
+    color: #F3F3F3;
+    font-size: 20px;
+    text-transform: lowercase;
+}
+
+.img_footer {
+    display: flex; 
+    flex-direction: row;
+}
+
+.connect__icons__arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 150px;
+    margin-top: 150px;
+}
+
+.arrow {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.btnup {
+    width: 50px;
+    height: 50px;
+    background-color: #ab45df7e;
+    margin-left: 100px;
+    border-radius: 50px;
+    scroll-behavior: smooth;
+    
+}
+
+
+
+/* kroshki */
+.kroshki{
+    padding-top: 100px;
+}
+
+.kroshki p{
+    color: rgba(149, 65, 27, 0.73);
+    font-family: Jura;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+/* kroshki */
+
+
+.katalog{
+    padding-top: 30px;
+}
+
+.katalog h2{
+    color: #95411B;
+    text-shadow: 0px 5px 7px rgba(149, 65, 27, 0.50);
+    font-family: Jura;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.poisk{
+    padding-top: 35px;
+}
+
+.poiskkk{
+    width: 370px;
+    height: 34px;
+    border: 1px solid #95411B;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.poiskkk img{
+    padding-left: 10px;
+}
+
+.poiskkk a{
+    color: rgba(149, 65, 27, 0.73);
+    font-family: Jura;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.poisk{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filt a{
+    color: #95411B;
+    font-family: Jura;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+
+.slider{
+    padding-bottom: 60px;
+    padding-top: 65px;
+}
+
+.slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.slide a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide .v{
+    color: #F3F3F3;
+    font-family: Jura;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 60px;
+    height: 35px;
+    flex-shrink: 0;
+    background: #95411B;
+}
+
+.slide .vid{
+    color: #95411B;
+    font-family: Jura;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width: 60px;
+    height: 35px;
+    text-align: center;
+    flex-shrink: 0;
+    border: 1px solid #95411B;
+}
+
